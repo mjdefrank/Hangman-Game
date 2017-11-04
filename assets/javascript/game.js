@@ -64,10 +64,8 @@ document.onkeyup = function (event)//Brian helped with this, I don't understand 
 		userPressed = event.key
 		console.log(userPressed)
 		triesLeft--
-		document.getElementById("guessLeft").innerHTML = "<p>Tries remaining: </p>" + triesLeft;	
-	};
-//----------------------script above works---------------------------//
-//create a for loop to check userPressed for each letter of hangWord corresponding to the hangWordArray;
+		document.getElementById("guessLeft").innerHTML = "<p>Tries remaining: </p>" + triesLeft;
+		//create a for loop to check userPressed for each letter of hangWord corresponding to the hangWordArray;
 for (var i= 0; i < hangWordArray.length; i++)
 	{ 
 		//if userPressed is equal to character value in the index value of the corresponding iteration of loop, insert userPressed into blankSpacesPlaceHolder array
@@ -84,7 +82,10 @@ for (var i= 0; i < hangWordArray.length; i++)
 			insertLetter();
 			document.getElementById('currentWord').innerHTML = blankSpacesPlaceHolder;
 		}
+	};	
 	};
+//----------------------script above works---------------------------//
+
 
 //create condition to increase wins and losses; would be part of larger loop, but I can't get my game to work 
 //if (hangWordArray === blankSpacesPlaceHolder){winTotal++};
